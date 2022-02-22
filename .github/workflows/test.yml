@@ -1,4 +1,4 @@
-name: ci-test
+name: Run unit tests
 
 on:
   push:
@@ -23,7 +23,7 @@ jobs:
           POSTGRES_PASSWORD: secret
           POSTGRES_DB: simple_bank
         ports:
-          - 5432:5432
+          - 5433:5432
     steps:
 
     - name: Set up Go
